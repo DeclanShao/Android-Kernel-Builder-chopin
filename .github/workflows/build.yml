@@ -212,7 +212,7 @@ jobs:
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
           echo "PATH Variable: $PATH"
-          cp arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }} chopin_geeknosched_defconfig
+          make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
       - name: "🎶 Build kernel"
         working-directory: ${{ env.KERNEL_NAME }}
         env:
