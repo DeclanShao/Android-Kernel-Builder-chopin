@@ -212,15 +212,14 @@ jobs:
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
           echo "PATH Variable: $PATH"
-          make ${{ env.args }} ${{ env.DEFCONFIG_NAME }}
-
+          cp arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }} chopin_geeknosched_defconfig
       - name: "🎶 Build kernel"
         working-directory: ${{ env.KERNEL_NAME }}
         env:
           args: ${{ steps.generate-args.outputs.args }}
         run: |
           echo "PATH Variable: $PATH"
-          make ${{ env.args }} -i
+          make ${{ env.args }} --keep-going
 
       - name: "💛 Upload Image"
         uses: actions/upload-artifact@v3
