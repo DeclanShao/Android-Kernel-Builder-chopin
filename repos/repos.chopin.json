@@ -5,7 +5,7 @@
       "repo": "https://github.com/cterxn/kernel_xiaomi_chopin",
       "branch": "r",
       "device": "chopin",
-      "defconfig": "chopin_halfgeek_defconfig"
+      "defconfig": "chopin_currentgeek_config"
     },
     "withKernelSU": true,
     "toolchains": [
