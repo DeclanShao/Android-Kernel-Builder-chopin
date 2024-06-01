@@ -198,7 +198,6 @@ jobs:
           fi
 
           curl -LSs "https://raw.githubusercontent.com/cterxn/KernelSU4NonGKI/main/kernel/setup.sh" | bash -s main
-          mv  /home/runner/work/Android-Kernel-Builder-chopin/Android-Kernel-Builder-chopin/Chopin_KernelSU_Proton/KernelSU4NonGKI  /home/runner/work/Android-Kernel-Builder-chopin/Android-Kernel-Builder-chopin/Chopin_KernelSU_Proton/KernelSU
           echo -e "CONFIG_KPROBES=y" >> arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
           echo -e "CONFIG_HAVE_KPROBES=y" >> arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
           echo -e "CONFIG_KPROBE_EVENTS=y" >> arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
