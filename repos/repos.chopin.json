@@ -2,12 +2,12 @@
   {
     "kernelSource": {
       "name": "Chopin_KernelSU_Proton",
-      "repo": "https://github.com/cterxn/kernel_xiaomi_chopin",
-      "branch": "r",
+      "repo": "https://github.com/Declanshao/android_kernel_smartisan_sdm660",
+      "branch": "4.19",
       "device": "chopin",
-      "defconfig": "chopin_currentgeek_defconfig"
+      "defconfig": "vendor/osborn_defconfig"
     },
-    "withKernelSU": true,
+    "withKernelSU": false,
     "toolchains": [
       {
         "repo": "https://github.com/kdrag0n/proton-clang",
